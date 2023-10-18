@@ -2,26 +2,174 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-[#001049];
+  background-image: url("/background.png");
+  background-size: cover;
+}
+
+/* navbar section starts from here ______________________________________________________________*/
+.main-nav {
+  @apply fixed w-full  h-[89px] z-20 flex items-center justify-center;
+}
+.inner-nav {
+  @apply w-[90%]  flex items-center justify-between;
+}
+.first-div {
+  @apply flex items-center md:gap-44 lg:gap-52 justify-between;
+}
+.logo {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 900;
+  @apply cursor-pointer font-[36px];
+}
+.nav-btn {
+  padding: 15px 25px;
+  border-radius: 40px;
+  border: 1px solid #014c98;
+  @apply hidden sm:block;
+}
+.nav-links {
+  font-family: Montserrat;
+  @apply hover:text-[#0F90CA] cursor-pointer hidden md:block;
+}
+.nav-truthy {
+  @apply fixed z-50 sm:hidden flex items-center justify-center  bg-slate-200 top-0 left-[100] h-full w-[80%];
+}
+.nav-falsy {
+  @apply fixed hidden top-0 left-[-100];
+}
+.mobileNav-inner {
+  @apply w-[90%] h-[90%] flex flex-col;
+}
+
+/* Hero section starts from here ___________________________________________________________ */
+.h1font {
+  font-family: Montserrat;
+  @apply text-white font-bold text-4xl xl:text-6xl;
+}
+.main-hero {
+  @apply w-full flex items-center justify-center;
+}
+.inner-hero {
+  @apply w-[90%] max-w-[1800px]  mt-[200px]  xl:mt-60  gap-20 md:gap-0 flex flex-col md:flex-row items-center justify-between;
+}
+.fhero-div {
+  @apply max-w-[350px] xl:max-w-[700px] flex flex-col gap-32 items-center justify-center;
+}
+.btn {
+  @apply text-white bg-[#0F90CA] rounded-[30px] p-3 flex flex-row gap-2;
+}
+/* services section ________________________________ _________________________________-__________*/
+
+.serviceh1 {
+  font-family: Poppins;
+  @apply text-[#ACE5FF] font-bold text-4xl cursor-pointer;
+}
+.main-service {
+  @apply w-full  flex items-center justify-center;
+}
+.inner-service {
+  @apply w-[90%] max-w-[1800px]  my-36 flex flex-col items-center justify-center;
+}
+.cards {
+  @apply flex w-[90%] flex-wrap  items-center justify-center md:justify-between;
+}
+/* Who section starts from here __________________________________________________________________*/
+.main-who {
+  @apply w-full flex gap-10 flex-col items-center justify-center;
+}
+.upper-who {
+  @apply w-[85%] lg:w-[75%] flex gap-5 flex-col items-center justify-center;
+}
+.down-who {
+  @apply w-[90%] max-w-[856px] mb-10 flex gap-5 flex-wrap items-center justify-center md:justify-between;
+}
+.whoh1 {
+  font-family: Poppins;
+  @apply text-[#001049] font-bold text-2xl cursor-pointer;
+}
+.down-inner {
+  @apply flex gap-5 flex-col items-center  justify-center  w-[266px] h-[295px] bg-white rounded-lg hover:bg-[#0F90CA]  hover:scale-110 duration-300;
+}
+/* client starts from here */
+.main-client {
+  @apply w-full flex items-center justify-center bg-white;
+}
+.inner-client {
+  @apply max-w-[1100px] w-[90%] mt-[87px] mb-[70px] gap-5 flex flex-col items-center justify-center;
+}
+.clh1 {
+  font-family: Montserrat;
+  @apply text-black font-black text-5xl;
+}
+.clp {
+  font-family: Montserrat;
+  @apply text-[#717074] font-bold text-2xl;
+}
+.main-clcard {
+  @apply overflow-hidden w-[90%] flex items-start justify-start;
+}
+.inner-clcard {
+  @apply gap-20 flex items-center justify-center cursor-grab active:cursor-grabbing;
+}
+.each-card {
+  @apply min-w-[288px] h-[400px] flex flex-col gap-5 justify-between;
+}
+.eachh1 {
+  font-family: Poppins;
+  @apply text-3xl  text-[#001049] font-semibold;
+}
+.eachp {
+  font-family: Poppins;
+  @apply text-[#A1A5B7] text-[20px] font-[400px];
+}
+.smallh1 {
+  font-family: Poppins;
+
+  @apply font-semibold text-[#001049] text-sm;
+}
+.smallp1 {
+  font-family: Poppins;
+  @apply text-[#a1a5b7] font-semibold text-sm;
+}
+.smallp2 {
+  font-family: Poppins;
+  @apply text-[#009ef7] text-sm  font-semibold;
+}
+/* Partner section starts from here ______________________________________________________________ */
+.main-p {
+  @apply w-full  bg-white flex items-center justify-center;
+}
+.inner-p {
+  @apply w-[80%] gap-2 my-10 flex flex-col items-center justify-center;
+}
+.ph1 {
+  font-family: Montserrat;
+  @apply text-[#001049] font-bold text-5xl;
+}
+.pp {
+  font-family: Montserrat;
+  @apply text-[#717074] max-w-[700px] font-bold text-2xl;
+}
+/* Footer section starts from here _________________________________________________ _____*/
+.main-footer {
+  @apply w-full flex items-center justify-center;
+}
+.inner-footer {
+  @apply grid grid-cols-1 md:grid-cols-3 my-5 gap-20;
+}
+.footerh1 {
+  font-family: Montserrat;
+  @apply text-white font-bold text-3xl;
+}
+/* copyright text____________________________________________________________________ */
+.crt {
+  font-family: Montserrat;
+  @apply text-[#001049] font-bold text-sm;
 }
