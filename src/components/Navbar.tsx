@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import { motion as m } from "framer-motion";
-
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import { useState, useEffect } from "react";
@@ -88,7 +86,7 @@ export default function Navbar() {
               }}
               href="/#home"
             >
-              <li className="">Home</li>
+              <li>Home</li>
             </a>
             <a
               onClick={() => {
@@ -96,7 +94,7 @@ export default function Navbar() {
               }}
               href="/#services"
             >
-              <li className="">Services</li>
+              <li>Services</li>
             </a>
             <a
               onClick={() => {
@@ -104,7 +102,7 @@ export default function Navbar() {
               }}
               href="/#about"
             >
-              <li className="">About Us</li>
+              <li>About Us</li>
             </a>
           </ul>
 
